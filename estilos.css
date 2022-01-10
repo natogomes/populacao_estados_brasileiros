@@ -32,7 +32,7 @@ th#poptotal {
 }
 
 th#estado {
-    width: 330px;
+    width: 280px;
 }
 
 th#populacao {
@@ -81,5 +81,9 @@ tbody > tr:nth-child(even) {
 
     th, td {
         font-size: 0.8em;
+    }
+
+    th#estado {
+        width: 500px;
     }
 }
