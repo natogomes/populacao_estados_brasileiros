@@ -1,7 +1,26 @@
 @charset "utf-8";
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor_fundo: rgb(29, 29, 29);
+    --cor_caption: lightgray;
+    --cor_thead_tfoot: rgb(77, 77, 77);
+    --cor_etados: rgb(14, 14, 187);
+    --cor_odd: rgb(255, 255, 255);
+    --cor_even: lightgray;
+}
+
 body {
-    background-color: rgb(29, 29, 29);
+    background-image: url('bandeira.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: var(--cor_fundo);
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,12 +34,12 @@ table {
 caption {
     font-size: 1.3em;
     padding: 10px;
-    background-color: lightgray;
+    background-color: var(--cor_caption);
 }
 
 td, th {
     border: 1px solid black;
-    padding: 10px;
+    padding: 8px;
 }
 
 th#posicao {
@@ -28,19 +47,19 @@ th#posicao {
 }
 
 th#poptotal {
-    width: 100px;
-}
-
-th#estado {
-    width: 280px;
-}
-
-th#populacao {
     width: 150px;
 }
 
+th#estado {
+    width: 380px;
+}
+
+th#populacao {
+    width: 170px;
+}
+
 thead, tfoot {
-    background-color: rgb(77, 77, 77);
+    background-color: var(--cor_thead_tfoot);
     color: white;
 }
 
@@ -58,7 +77,7 @@ td.total {
 
 a.estados {
     text-decoration: none;
-    color: rgb(14, 14, 187);
+    color: var(--cor_etados);
 }
 
 a.estados:hover {
@@ -66,11 +85,11 @@ a.estados:hover {
 }
 
 tbody > tr:nth-child(odd) {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--cor_odd);
 }
 
 tbody > tr:nth-child(even) {
-    background-color: lightgray;
+    background-color: var(--cor_even);
 }
 
 
@@ -85,5 +104,9 @@ tbody > tr:nth-child(even) {
 
     th#estado {
         width: 500px;
+    }
+
+    td, th{
+        padding: 6px;
     }
 }
